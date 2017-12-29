@@ -1,11 +1,11 @@
-import argparse as ap
+
 import cv2
 import os
 import csv
 import numpy as np
 
 feature_paths = "extract-feature"
-img_querry_path = "../data-test/331.jpg"
+img_querry_path = "../data-test/418.jpg"
 
 
 surf = cv2.xfeatures2d.SURF_create()
@@ -17,7 +17,7 @@ result = []
 
 for feature_path in os.listdir(feature_paths):
     temp_des = []                                       #luu cac des duoc lay tu file 
-    print "Xu Ly Anh: ", feature_path
+    print "Load File: ", feature_path
 
 
     with open('extract-feature/' + feature_path, 'rb') as csvfile:
@@ -52,45 +52,3 @@ for i, j in result:
 
 
 
-
-
-
-
-
-
-
-
-
-
-# Apply ratio test
-# good = []
-# for m,n in matches:
-#     if m.distance < 0.8*n.distance:
-#         good.append([m])
-
-# l2 = []
-# with open('extract-feature/17.jpg', 'rb') as csvfile:
-#     matrixreader = csv.reader(csvfile, delimiter=' ')
-#     l2.append("".join(next(matrixreader)))
-#     for row in matrixreader:
-#         l2.append([float(x) for x in row])
-
-
-
-# bf = cv2.BFMatcher()
-# matches = bf.knnMatch(des1,des2, k=2)
-
-# print len(matches)
-# # Apply ratio test
-# good = []
-# for m,n in matches:
-#     if m.distance < 0.8*n.distance:
-#         good.append([m])
-
-# print len(good)
-# # cv2.drawMatchesKnn expects list of lists as matches.
-# img3 = cv2.drawMatchesKnn(img1,kp1,img2,kp2,good,None,flags=2)
-
-# plt.imshow(img3),plt.show()
-# print len(des1[0])
-# #print des1[0]

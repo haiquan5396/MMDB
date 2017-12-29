@@ -1,15 +1,12 @@
 
-import argparse as ap
+
 import cv2
 import numpy as np
 import os
-from sklearn.svm import LinearSVC
-from sklearn.externals import joblib
 from scipy.cluster.vq import *
-from sklearn.preprocessing import StandardScaler
 from scipy.spatial import distance
 
-img_querry_path = "../data-test/418.jpg"
+img_querry_path = "../data-test/326.jpg"
 img_vs_cluster = np.load("img_vs_cluster.npy")
 voc = np.load("voc.npy")
 img_paths = np.load("img_paths.npy")

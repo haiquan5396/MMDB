@@ -1,11 +1,9 @@
 
 
-import argparse as ap
+
 import cv2
 import numpy as np
 import os
-from sklearn.svm import LinearSVC
-from sklearn.externals import joblib
 from scipy.cluster.vq import *
 from sklearn.preprocessing import StandardScaler
 
